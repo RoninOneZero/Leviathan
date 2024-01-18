@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://cwb2uymq2sr5b"
+path="res://.godot/imported/shadow_moses.map-16df847b712b6f8b7a4f80498f30e837.tres"
+
+[deps]
+
+source_file="res://maps/shadow_moses.map"
+dest_files=["res://.godot/imported/shadow_moses.map-16df847b712b6f8b7a4f80498f30e837.tres"]
+
+[params]
+
