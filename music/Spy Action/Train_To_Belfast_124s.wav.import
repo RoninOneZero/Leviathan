@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfd18rus6s45g"
+path="res://.godot/imported/Train_To_Belfast_124s.wav-25ecb45e35a938ba161774ebf0263a26.sample"
+
+[deps]
+
+source_file="res://music/Spy Action/Train_To_Belfast_124s.wav"
+dest_files=["res://.godot/imported/Train_To_Belfast_124s.wav-25ecb45e35a938ba161774ebf0263a26.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

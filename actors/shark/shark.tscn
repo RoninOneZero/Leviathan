@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw8nh2snk4p14"]
+
+[ext_resource type="Script" path="res://actors/shark/Shark.gd" id="1_vipw3"]
+[ext_resource type="Script" path="res://actors/shark/INPUT.gd" id="2_r0uw8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b010s"]
+radius = 0.3
+height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ofln"]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+texture_filter = 2
+distance_fade_max_distance = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7xghr"]
+material = SubResource("StandardMaterial3D_1ofln")
+radius = 0.3
+height = 1.5
+radial_segments = 8
+rings = 4
+
+[sub_resource type="PrismMesh" id="PrismMesh_txj67"]
+size = Vector3(0.3, 0.3, 0.115)
+
+[node name="Shark" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_vipw3")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_b010s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+ignore_occlusion_culling = true
+mesh = SubResource("CapsuleMesh_7xghr")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.316332, -0.372606)
+mesh = SubResource("PrismMesh_txj67")
+
+[node name="INPUT" type="Node" parent="." node_paths=PackedStringArray("pawn")]
+script = ExtResource("2_r0uw8")
+pawn = NodePath("..")

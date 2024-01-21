@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk2jc61tpbore"
+path="res://.godot/imported/Power_Broker_209bpm_120s.wav-b52bcaa1ccf2310f04062c2108beb452.sample"
+
+[deps]
+
+source_file="res://music/Spy Action/Power_Broker_209bpm_120s.wav"
+dest_files=["res://.godot/imported/Power_Broker_209bpm_120s.wav-b52bcaa1ccf2310f04062c2108beb452.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

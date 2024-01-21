@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cqy8wxngkuxaw"
+path="res://.godot/imported/Enter_Espionage_115s.wav-1461c13cd4fea65850447f289f2fc6f1.sample"
+
+[deps]
+
+source_file="res://music/Spy Action/Enter_Espionage_115s.wav"
+dest_files=["res://.godot/imported/Enter_Espionage_115s.wav-1461c13cd4fea65850447f289f2fc6f1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb0aeq7815cvk"]
+
+[ext_resource type="Shader" path="res://materials/shaders/water_ripple.gdshader" id="1_xbcme"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7smea"]
+shader = ExtResource("1_xbcme")
+shader_parameter/OCTAVE = 6
+shader_parameter/mulscale = 5.0
+shader_parameter/height = 0.6
+shader_parameter/tide = 0.1
+shader_parameter/foamthickness = 0.1
+shader_parameter/timescale = 1.0
+shader_parameter/waterdeep = 0.3
+shader_parameter/WATER_COL = Color(0.00392157, 0.121569, 0.32549, 1)
+shader_parameter/WATER2_COL = Color(0.04, 0.35, 0.78, 1)
+shader_parameter/FOAM_COL = Color(0.541176, 0.458824, 1, 1)
+
+[node name="WaterPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7smea")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
