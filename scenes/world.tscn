@@ -1,16 +1,16 @@
-[gd_scene load_steps=140 format=3 uid="uid://dsyeqx5jimftq"]
+[gd_scene load_steps=141 format=3 uid="uid://dsyeqx5jimftq"]
 
 [ext_resource type="Script" path="res://scenes/cargo_bay.gd" id="1_clffy"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_jxw50"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_chjty"]
 [ext_resource type="Material" uid="uid://b7o20smk7ghm7" path="res://materials/retro1.material" id="3_8bssr"]
-[ext_resource type="Texture2D" uid="uid://d3uqd2aqbai2w" path="res://textures/Dark/texture_13.png" id="3_n678q"]
-[ext_resource type="Texture2D" uid="uid://ciy5la802xhlx" path="res://textures/Dark/texture_08.png" id="4_twrql"]
-[ext_resource type="Texture2D" uid="uid://ds5xttwm1hpb3" path="res://textures/Orange/texture_04.png" id="6_5t32s"]
-[ext_resource type="Texture2D" uid="uid://btkmnwu0o3ikb" path="res://textures/Light/texture_11.png" id="7_rc27i"]
-[ext_resource type="Texture2D" uid="uid://dxwvysc2lmom7" path="res://textures/Dark/texture_01.png" id="7_yq1uu"]
-[ext_resource type="Texture2D" uid="uid://dn7kx41w4kyf2" path="res://textures/Orange/texture_01.png" id="8_mu7t1"]
-[ext_resource type="Texture2D" uid="uid://bpex6aa3eakw" path="res://textures/Green/texture_12.png" id="9_7tktb"]
+[ext_resource type="Texture2D" uid="uid://d3uqd2aqbai2w" path="res://textures/dev/Dark/texture_13.png" id="3_n678q"]
+[ext_resource type="Texture2D" uid="uid://ciy5la802xhlx" path="res://textures/dev/Dark/texture_08.png" id="4_twrql"]
+[ext_resource type="Texture2D" uid="uid://ds5xttwm1hpb3" path="res://textures/dev/Orange/texture_04.png" id="6_5t32s"]
+[ext_resource type="Texture2D" uid="uid://btkmnwu0o3ikb" path="res://textures/dev/Light/texture_11.png" id="7_rc27i"]
+[ext_resource type="Texture2D" uid="uid://dxwvysc2lmom7" path="res://textures/dev/Dark/texture_01.png" id="7_yq1uu"]
+[ext_resource type="Texture2D" uid="uid://dn7kx41w4kyf2" path="res://textures/dev/Orange/texture_01.png" id="8_mu7t1"]
+[ext_resource type="Texture2D" uid="uid://bpex6aa3eakw" path="res://textures/dev/Green/texture_12.png" id="9_7tktb"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="12_4h1rb"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_hc656"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="14_x7khs"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0aeq7815cvk" path="res://scenes/user_interface/water_panel.tscn" id="16_fct0y"]
 [ext_resource type="Script" path="res://scenes/CamTrigger.gd" id="17_x5cj3"]
 [ext_resource type="AudioStream" uid="uid://berlxrpdk3yse" path="res://music/Spy Action/Manhunt_125bpm_108s.wav" id="18_bsfbj"]
+[ext_resource type="PackedScene" uid="uid://cf7xyvtgirb3o" path="res://interface/command gizmo/command_gizmo.tscn" id="19_bpsgu"]
 
 [sub_resource type="Resource" id="Resource_uilt4"]
 script = ExtResource("14_x7khs")
@@ -1157,11 +1158,6 @@ shape = SubResource("ConvexPolygonShape3D_ry2qi")
 [node name="Shark" parent="WorldEnvironment" instance=ExtResource("15_54rde")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52147, 2, 10.2884)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -10
-
-[node name="WaterPanel" parent="CanvasLayer" instance=ExtResource("16_fct0y")]
-
 [node name="Cameras" type="Node" parent="."]
 
 [node name="OrbitPivot" type="Node3D" parent="Cameras"]
@@ -1372,3 +1368,16 @@ camera_3D_resource = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_bsfbj")
+
+[node name="BackgroundFX" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="WaterPanel" parent="BackgroundFX" instance=ExtResource("16_fct0y")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="CommandGizmo" parent="HUD" instance=ExtResource("19_bpsgu")]
+offset_left = 240.0
+offset_top = 163.0
+offset_right = 240.0
+offset_bottom = 163.0

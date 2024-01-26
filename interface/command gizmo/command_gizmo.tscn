@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=3 uid="uid://cf7xyvtgirb3o"]
+
+[ext_resource type="Script" path="res://interface/command gizmo/command_gizmo.gd" id="1_eoyvs"]
+[ext_resource type="Texture2D" uid="uid://durndhwfcqh2m" path="res://textures/interface/circle.png" id="1_n66uy"]
+[ext_resource type="Texture2D" uid="uid://ttftftixvls2" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_cross_outline.svg" id="2_jkfbt"]
+[ext_resource type="Texture2D" uid="uid://cmnmklfimnc2m" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_triangle.svg" id="3_56pi4"]
+[ext_resource type="Texture2D" uid="uid://ba8qyoglpk1i8" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_triangle_outline.svg" id="3_qvkgc"]
+[ext_resource type="Texture2D" uid="uid://c0al6qxp52in8" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_square_outline.svg" id="4_keup6"]
+[ext_resource type="Texture2D" uid="uid://bsqt5t7n6cb7t" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_cross.svg" id="5_avkhj"]
+[ext_resource type="Texture2D" uid="uid://mqe2mjq7y77n" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_circle_outline.svg" id="5_in3aj"]
+[ext_resource type="Texture2D" uid="uid://dredmcmbp22v0" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_square.svg" id="7_k1sj4"]
+[ext_resource type="Texture2D" uid="uid://bp3t6tnb2j8n1" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_button_color_circle.svg" id="9_a6gqo"]
+[ext_resource type="Texture2D" uid="uid://i80a6mle6qce" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_trigger_l1_alternative_outline.svg" id="10_mkxuk"]
+[ext_resource type="Texture2D" uid="uid://dsf63lvgma8yf" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_trigger_l1_alternative.svg" id="11_yi866"]
+[ext_resource type="Texture2D" uid="uid://dht0b3yi23l5y" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_trigger_r1_alternative_outline.svg" id="12_xsqbq"]
+[ext_resource type="Texture2D" uid="uid://dt8oywad4o00t" path="res://textures/interface/kenney_input-prompts/Playstation 5/playstation_trigger_r1_alternative.svg" id="13_2pqe4"]
+
+[node name="CommandGizmo" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eoyvs")
+top = ExtResource("3_qvkgc")
+top_pressed = ExtResource("3_56pi4")
+bottom = ExtResource("2_jkfbt")
+bottom_pressed = ExtResource("5_avkhj")
+left = ExtResource("4_keup6")
+left_pressed = ExtResource("7_k1sj4")
+right = ExtResource("5_in3aj")
+right_pressed = ExtResource("9_a6gqo")
+left_shoulder = ExtResource("10_mkxuk")
+left_shoulder_pressed = ExtResource("11_yi866")
+right_shoulder = ExtResource("12_xsqbq")
+right_shoulder_pressed = ExtResource("13_2pqe4")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 0.490196)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n66uy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TopFace" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -48.0
+offset_right = 22.5
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_qvkgc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LeftFace" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -21.0
+offset_right = -3.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_keup6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightFace" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -21.0
+offset_right = 48.0
+offset_bottom = 24.0
+grow_vertical = 2
+texture = ExtResource("5_in3aj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BottomFace" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.5
+offset_top = 5.0
+offset_right = 22.5
+offset_bottom = 50.0
+grow_horizontal = 2
+texture = ExtResource("2_jkfbt")
+expand_mode = 1
+stretch_mode = 5
